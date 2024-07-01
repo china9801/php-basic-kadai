@@ -23,10 +23,27 @@
           }
         }
 
+        class Animal {
+          private $name;
+          private $height;
+          private $weight;
+
+          public function __construct(string $name, int $height, int $weight) {
+            $this->name = $name;
+            $this->height = $height;
+            $this->weight = $weight;
+          }
+
+          public function show_height() {
+            echo $this->height;
+          }
+        }
 
         $potato = new food('potato', 250);
+        $dog = new animal('dog', 60, 5000);
 
-        
+        print_r($potato);
+        print_r($dog);
         ?>
     </p>
 </body>
